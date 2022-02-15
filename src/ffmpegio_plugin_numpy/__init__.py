@@ -8,6 +8,8 @@ from numpy.typing import ArrayLike
 
 hookimpl = HookimplMarker("ffmpegio")
 
+__version__ = "0.3.1"
+
 __all__ = [
     "video_info",
     "audio_info",
