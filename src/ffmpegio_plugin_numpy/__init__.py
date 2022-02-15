@@ -69,7 +69,7 @@ def audio_bytes(obj: ArrayLike) -> memoryview:
 
 
 @hookimpl
-def bytes_to_video(b: bytes, dtype: str, shape: Tuple[int, int, int]) -> ArrayLike:
+def bytes_to_video(b: bytes, dtype: str, shape: Tuple[int, int, int], squeeze: bool) -> ArrayLike:
     """convert bytes to rawvideo NumPy array
 
     :param b: byte data of arbitrary number of video frames
@@ -78,15 +78,18 @@ def bytes_to_video(b: bytes, dtype: str, shape: Tuple[int, int, int]) -> ArrayLi
     :type dtype: str
     :param size: frame dimension in pixels and number of color components (height, width, components)
     :type size: Tuple[int, int, int]
+    :param squeeze: True to remove all the singular dimensions
+    :type squeeze: bool
     :return: rawvideo frames
     :rtype: ArrayLike
     """
 
-    return np.frombuffer(b, dtype).reshape(-1, *shape)
+    x = np.frombuffer(b, dtype).reshape(-1, *shape)
+    return x.squeeze() if squeeze else x
 
 
 @hookimpl
-def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int]) -> ArrayLike:
+def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int], squeeze: bool) -> ArrayLike:
     """convert bytes to rawaudio NumPy array
 
     :param b: byte data of arbitrary number of video frames
@@ -95,8 +98,11 @@ def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int]) -> ArrayLike:
     :type dtype: str
     :param shape: number of audio channels
     :type shape: Tuple[int]
+    :param squeeze: True to remove all the singular dimensions
+    :type squeeze: bool
     :return: raw audio samples
     :rtype: ArrayLike
     """
 
-    return np.frombuffer(b, dtype).reshape(-1, *shape)
+    x = np.frombuffer(b, dtype).reshape(-1, *shape)
+    return x.squeeze() if squeeze else x
