@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.4.0] - 2022-02-22
+
+### Changed
+
+- Matching the `ffmpegio` version bump 
+
 ## [0.3.3] - 2022-02-18
 
 ### Changed
@@ -16,6 +22,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ### Added
 
 - Added `squeeze` argument to `bytes_to_video` and `bytes_to_audio` hooks
+  
 ## [0.3.0] - 2022-02-13
 
 ### Added
@@ -23,6 +30,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 - First release.
 - A plugin to convert raw media I/O data of `ffmpegio` to use `numpy.ndarray` objects.
 
-[Unreleased]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.3...HEAD
-[v0.3.3]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.1...v0.3.3
+[Unreleased]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.4.0...HEAD
+[v0.3.3]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.1...v0.4.0
 [v0.3.1]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.0...v0.3.1
