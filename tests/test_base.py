@@ -1,8 +1,9 @@
+from pprint import pprint
 import tempfile
 from os import path
 import numpy as np
 
-from ffmpegio import plugins, utils, audio, video
+from ffmpegio import plugins, utils, audio, video, probe
 
 
 def test_hooks():
@@ -41,10 +42,12 @@ def test_audio():
 
     with tempfile.TemporaryDirectory() as tmpdirname:
         wavfile = path.join(tmpdirname, "test.wav")
-        audio.write(wavfile, fs, x)
+        audio.write(wavfile, fs, x, show_log=True)
+        pprint(probe.full_details(wavfile))
         fs1, x1 = audio.read(wavfile)
 
     assert fs == fs1
+    assert x.shape==x1.shape
     assert np.array_equal(x, x1)
 
 
