@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.6.0] - 2022-08-13
+
+### Changed
+
+- Matching the `ffmpegio` version bump 
+- `video_info()` allows 2-D grayscale array
+- `audio_info()` allows 1-D mono array
+
 ## [0.5.1] - 2022-04-21
 
 ### Changed
