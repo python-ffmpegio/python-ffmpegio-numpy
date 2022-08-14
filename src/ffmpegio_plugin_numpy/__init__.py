@@ -29,7 +29,7 @@ def video_info(obj: ArrayLike) -> Tuple[Tuple[int, int, int], str]:
     :return: shape (height,width,components) and data type str
     :rtype: Tuple[Tuple[int, int, int], str]
     """
-    return obj.shape[-3:], obj.dtype.str
+    return obj.shape[-3:] if obj.ndim != 2 else [*obj.shape, 1], obj.dtype.str
 
 
 @hookimpl
@@ -41,7 +41,7 @@ def audio_info(obj: ArrayLike) -> Tuple[int, str]:
     :return: number of channels and sample data type in data type str
     :rtype: Tuple[Tuple[int], str]
     """
-    return obj.shape[-1:], obj.dtype.str
+    return obj.shape[-1:] if obj.ndim > 1 else [1], obj.dtype.str
 
 
 @hookimpl
@@ -71,7 +71,9 @@ def audio_bytes(obj: ArrayLike) -> memoryview:
 
 
 @hookimpl
-def bytes_to_video(b: bytes, dtype: str, shape: Tuple[int, int, int], squeeze: bool) -> ArrayLike:
+def bytes_to_video(
+    b: bytes, dtype: str, shape: Tuple[int, int, int], squeeze: bool
+) -> ArrayLike:
     """convert bytes to rawvideo NumPy array
 
     :param b: byte data of arbitrary number of video frames

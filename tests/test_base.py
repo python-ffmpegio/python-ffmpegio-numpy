@@ -21,7 +21,7 @@ def test_hooks():
 
     data = hook.bytes_to_video(b=b, dtype=dtype, shape=shape, squeeze=True)
     assert data.shape == shape
-    
+
     dtype = "<f4"
     shape = (2,)
     b = b"\0" * (1024 * utils.prod(shape))
@@ -46,8 +46,10 @@ def test_audio():
         pprint(probe.full_details(wavfile))
         fs1, x1 = audio.read(wavfile)
 
+        audio.write(wavfile, fs, x1[:, 0], show_log=True, overwrite=True)
+
     assert fs == fs1
-    assert x.shape==x1.shape
+    assert x.shape == x1.shape
     assert np.array_equal(x, x1)
 
 
@@ -60,6 +62,9 @@ def test_video():
         avifile = path.join(tmpdirname, "test.avi")
         video.write(avifile, fs, F, pix_fmt="bgr24", vcodec="rawvideo", show_log=True)
         fs1, F1 = video.read(avifile)
+
+        # test 2-D input
+        video.write(avifile, fs, np.array(F[0, :, :, 0]), show_log=True, overwrite=True)
 
     assert fs == fs1
     assert np.array_equal(F, F1)
