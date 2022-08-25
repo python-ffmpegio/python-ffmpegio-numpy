@@ -8,7 +8,7 @@ from numpy.typing import ArrayLike
 
 hookimpl = HookimplMarker("ffmpegio")
 
-__version__ = "0.6.0.post"
+__version__ = "0.7.0"
 # When updating version, make sure to update setup.cfg install_requires 
 # ffmpegio-core version to match current ffmpeg-core version
 

@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.7.0] - 2022-08-24
+
+### Changed
+
+- Matching the `ffmpegio` version bump 
+- `video_bytes()` and `audio_bytes()` make sure data frames are C-contiguous
+
 ## [0.6.0] - 2022-08-13
 
 ### Changed
