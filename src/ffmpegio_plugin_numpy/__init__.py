@@ -56,7 +56,7 @@ def video_bytes(obj: ArrayLike) -> memoryview:
     :rtype: memoryview
     """
 
-    return memoryview(obj)
+    return memoryview(np.ascontiguousarray(obj))
 
 
 @hookimpl
@@ -69,7 +69,7 @@ def audio_bytes(obj: ArrayLike) -> memoryview:
     :rtype: memoryview
     """
 
-    return memoryview(obj)
+    return memoryview(np.ascontiguousarray(obj))
 
 
 @hookimpl
