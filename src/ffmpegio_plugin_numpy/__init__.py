@@ -8,7 +8,7 @@ from numpy.typing import ArrayLike
 
 hookimpl = HookimplMarker("ffmpegio")
 
-__version__ = "0.8.2"
+__version__ = "0.8.3"
 # When updating version, make sure to update setup.cfg install_requires 
 # ffmpegio-core version to match current ffmpeg-core version
 
@@ -63,7 +63,7 @@ def video_bytes(obj: ArrayLike) -> memoryview:
     """
 
     try:
-        return memoryview(np.ascontiguousarray(obj))
+        return memoryview(np.ascontiguousarray(obj, obj.dtype))
     except:
         return None
 
@@ -79,7 +79,7 @@ def audio_bytes(obj: ArrayLike) -> memoryview:
     """
 
     try:
-        return memoryview(np.ascontiguousarray(obj))
+        return memoryview(np.ascontiguousarray(obj, obj.dtype))
     except:
         return None
 
