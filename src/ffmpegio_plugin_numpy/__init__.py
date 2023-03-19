@@ -31,7 +31,10 @@ def video_info(obj: ArrayLike) -> Tuple[Tuple[int, int, int], str]:
     :return: shape (height,width,components) and data type str
     :rtype: Tuple[Tuple[int, int, int], str]
     """
-    return obj.shape[-3:] if obj.ndim != 2 else [*obj.shape, 1], obj.dtype.str
+    try:
+        return obj.shape[-3:] if obj.ndim != 2 else [*obj.shape, 1], obj.dtype.str
+    except:
+        return None
 
 
 @hookimpl
@@ -43,7 +46,10 @@ def audio_info(obj: ArrayLike) -> Tuple[int, str]:
     :return: number of channels and sample data type in data type str
     :rtype: Tuple[Tuple[int], str]
     """
-    return obj.shape[-1:] if obj.ndim > 1 else [1], obj.dtype.str
+    try:
+        return obj.shape[-1:] if obj.ndim > 1 else [1], obj.dtype.str
+    except:
+        return None
 
 
 @hookimpl
@@ -56,7 +62,10 @@ def video_bytes(obj: ArrayLike) -> memoryview:
     :rtype: memoryview
     """
 
-    return memoryview(np.ascontiguousarray(obj))
+    try:
+        return memoryview(np.ascontiguousarray(obj))
+    except:
+        return None
 
 
 @hookimpl
@@ -69,7 +78,10 @@ def audio_bytes(obj: ArrayLike) -> memoryview:
     :rtype: memoryview
     """
 
-    return memoryview(np.ascontiguousarray(obj))
+    try:
+        return memoryview(np.ascontiguousarray(obj))
+    except:
+        return None
 
 
 @hookimpl
@@ -90,9 +102,11 @@ def bytes_to_video(
     :rtype: ArrayLike
     """
 
-    x = np.frombuffer(b, dtype).reshape(-1, *shape)
-    return x.squeeze() if squeeze else x
-
+    try:
+        x = np.frombuffer(b, dtype).reshape(-1, *shape)
+        return x.squeeze() if squeeze else x
+    except:
+        return None
 
 @hookimpl
 def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int], squeeze: bool) -> ArrayLike:
@@ -110,5 +124,9 @@ def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int], squeeze: bool) -> Ar
     :rtype: ArrayLike
     """
 
-    x = np.frombuffer(b, dtype).reshape(-1, *shape)
-    return x.squeeze() if squeeze else x
+    try:
+        x = np.frombuffer(b, dtype).reshape(-1, *shape)
+        return x.squeeze() if squeeze else x
+    except:
+        return None
+    
