@@ -20,15 +20,16 @@ classifiers = [
     "Topic :: Multimedia :: Video",
     "Topic :: Multimedia :: Video :: Capture",
     "Topic :: Multimedia :: Video :: Conversion",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
 
 dynamic = ["version"]
-requires-python = ">=3.7"
-dependencies = ["ffmpegio-core >= 0.8.2", "numpy >= 1.20"]
+requires-python = ">=3.8"
+dependencies = ["ffmpegio-core >= 0.8.4", "numpy >= 1.20"]
 
 [project.urls]
 Home = "https://python-ffmpegio.github.io/python-ffmpegio"

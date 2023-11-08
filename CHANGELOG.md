@@ -5,17 +5,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.8.3] - 2023-11-07
+
+### Changed
+
+- Matching the `ffmpegio-core` version bump 
+
 ## [0.8.3] - 2023-03-19
 
 ### Changed
 
-- Force 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.8.2] - 2023-03-19
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.8.2] - 2023-03-18
 
@@ -25,20 +31,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Changed
 
-- Skipping 0.8.0 to match `ffmpegio` version
+- Skipping 0.8.0 to match `ffmpegio-core` version
 
 ## [0.7.0] - 2022-08-24
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 - `video_bytes()` and `audio_bytes()` make sure data frames are C-contiguous
 
 ## [0.6.0] - 2022-08-13
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 - `video_info()` allows 2-D grayscale array
 - `audio_info()` allows 1-D mono array
 
@@ -46,31 +52,31 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.5.0] - 2022-04-03
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.4.1] - 2022-02-22
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.4.0] - 2022-02-22
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.3.3] - 2022-02-18
 
 ### Changed
 
-- Matching the `ffmpegio` version bump 
+- Matching the `ffmpegio-core` version bump 
 
 ## [0.3.1] - 2022-02-13
 
