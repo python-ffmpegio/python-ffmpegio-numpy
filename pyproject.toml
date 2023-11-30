@@ -29,7 +29,7 @@ classifiers = [
 
 dynamic = ["version"]
 requires-python = ">=3.8"
-dependencies = ["ffmpegio-core == 0.8.5", "numpy >= 1.20"]
+dependencies = ["ffmpegio-core >= 0.8.6", "numpy >= 1.20"]
 
 [project.urls]
 Home = "https://python-ffmpegio.github.io/python-ffmpegio"

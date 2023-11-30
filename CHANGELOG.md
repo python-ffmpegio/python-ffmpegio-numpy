@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.8.6] - 2023-11-29
+
+### Changed
+
+- Matching the `ffmpegio-core` version bump 
+
 ## [0.8.5] - 2023-11-13
 
 ### Changed
@@ -29,7 +35,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 - Matching the `ffmpegio-core` version bump 
 
-## [0.8.2] - 2023-03-18
+## [0.8.1] - 2023-03-18
 
 ### Fixed
 
@@ -97,7 +103,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 - First release.
 - A plugin to convert raw media I/O data of `ffmpegio` to use `numpy.ndarray` objects.
 
-[Unreleased]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.6...HEAD
+[v0.8.6]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.5...0.8.6
+[v0.8.5]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.4...0.8.5
+[v0.8.4]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.3...0.8.4
+[v0.8.3]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.2...0.8.3
+[v0.8.2]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.8.1...0.8.2
+[v0.8.1]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.7.0...0.8.1
+[v0.7.0]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.6.0...0.7.0
+[v0.6.0]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.5.1...0.6.0
+[v0.5.1]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.5.0...0.5.1
 [v0.5.0]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.4.1...v0.5.0
 [v0.3.3]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.1...v0.4.1
 [v0.3.1]: https://github.com/python-ffmpegio/python-ffmpegio/compare/v0.3.0...v0.3.1
