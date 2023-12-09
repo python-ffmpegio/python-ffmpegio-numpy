@@ -8,7 +8,7 @@ from numpy.typing import ArrayLike
 
 hookimpl = HookimplMarker("ffmpegio")
 
-__version__ = "0.8.6"
+__version__ = "0.9.0"
 # ffmpegio-core version to match current ffmpeg-core version
 
 __all__ = [
@@ -107,6 +107,7 @@ def bytes_to_video(
     except:
         return None
 
+
 @hookimpl
 def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int], squeeze: bool) -> ArrayLike:
     """convert bytes to rawaudio NumPy array
@@ -128,4 +129,3 @@ def bytes_to_audio(b: bytes, dtype: str, shape: Tuple[int], squeeze: bool) -> Ar
         return x.squeeze() if squeeze else x
     except:
         return None
-    
