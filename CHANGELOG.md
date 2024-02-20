@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 
 ## [Unreleased]
 
+## [0.9.1] - 2024-02-19
+
+### Changed
+
+- Matching the `ffmpegio-core` version bump 
+
 ## [0.9.0] - 2023-12-08
 
 ### Changed
