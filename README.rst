@@ -14,6 +14,10 @@
 .. |github-status| image:: https://img.shields.io/github/workflow/status/python-ffmpegio/python-ffmpegio/Run%20Tests
   :alt: GitHub Workflow Status
 
+..
+
+  This plugin has been merged to the main `ffmpegio-core` package since `v0.11.0`. On PyPI, the `ffmpegio-core` has been renamed as `ffmpegio` to supercede this package.
+
 Python `ffmpegio` package aims to bring the full capability of `FFmpeg <https://ffmpeg.org>`__
 to read, write, probe, and manipulate multimedia data to Python. FFmpeg is an open-source cross-platform 
 multimedia framework, which can handle most of the multimedia formats available today.
